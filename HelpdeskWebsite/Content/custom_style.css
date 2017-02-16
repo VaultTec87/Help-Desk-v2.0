@@ -1,0 +1,94 @@
+﻿div.error
+{
+    background-color: blue;
+    color:aqua;
+    border-color: black;
+    border-style:solid solid solid solid;
+    border-radius: 25px;
+    border-width: 2px;
+    width: 75%;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    box-shadow: 5px 5px 3px #888888;
+}
+
+.navbar-inverse 
+{
+    background-color: #F8F8F8;
+    border-color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a 
+{
+    color: blue;
+    font-family:Britannic;
+}
+
+.navbar-inverse .navbar-nav > .active > a, navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus
+{
+    color: white;
+    background-color: blue;
+}
+
+.navbar-inverse .navbar-brand
+{
+    color: blue;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .nav > li > a:focus 
+{ 
+    background-color: blue;
+    color: white;
+    transition: 1s;
+}
+
+body
+{
+    background-color:#F8F8F8;
+}
+
+.home_image
+{
+    border-width: 75px;
+    border-style: outset;
+}
+
+button.list-group-item
+{
+    color: blue;
+    font-family:Britannic;
+}
+
+button.list-group-item:hover
+{
+    transition: .5s;
+    background-color: blue;
+    color: white;
+}
+
+#myModal
+{
+    transition: all 1.5s ease-in;
+    background-color: #F8F8F8;
+    color: blue;
+    font-family:Britannic;
+}
+
+#myModal .panel-heading
+{
+    color: blue;
+    font-family:Britannic;
+}
+
+#myModal #ButtonAction
+{
+    background-color:blue;
+    font-family:Britannic;
+}
+
+#myModal #ButtonDelete
+{
+    background-color:red;
+    font-family:Britannic;
+}

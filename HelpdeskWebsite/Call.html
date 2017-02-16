@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Call Editor</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/custom_style.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:;base64,iVBORwKGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Helpdesk Case #2</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse row">
+            <ul class="nav navbar-nav" id="menu" style="padding-left:20px;">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/employee.html">Employee</a></li>
+                <li><a href="/department.html">Department</a></li>
+                <li><a href="/problem.html">Problem</a></li>
+                <li class="active"><a href="/Call.html">Call</a></li>
+                <li><a href="/util.html">Utilities</a></li>
+                
+            </ul>
+            <ul class="nav pull-right" style="padding-right:20px;padding-top:10px;color:white;font-weight:bolder">
+                <li>v2.0</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col-sm-2" &nbsp;></div>
+    <div class="col-sm-8 col-xs-12 main-panel" style="padding-top:100px;">
+        <div class="text-center row app-head">
+            <img src="help.jpg"style="width:325px;height:200px"/>
+            <h4>Calls</h4>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <span class="msg" id="LabelStatus"></span>
+            </div>
+            <div class="panel-body">
+                <div id="main"></div>
+            </div>
+        </div>
+    </div>
+    <form id="CallModalForm" name="CallModalForm" method="post" action="">
+        <div class="modal fade text-center" data-backdrop="static" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                        <img src="call html.jpg"style="width:150px;height:150px" />
+                        <h1>Calls</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center" style="font-weight:bold; font-size:20px; font-family:'Century Gothic'">
+                                Change Selected Call Information
+                            </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-2" style="font-weight:bold; font-family:Britannic;">Problem:</div>
+                                        <div class="col-xs-7"><select id="ddlProblem" name="ddlProblem" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2" style="font-weight:bold; font-family:Britannic">Employee:</div>
+                                        <div class="col-xs-7"><select id="ddlEmployees" name="ddlEmployees" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2" style="font-weight:bold;font-family:Britannic">Technician:</div>
+                                        <div class="col-xs-7"><select id="ddlTech" name="ddlTech" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2" style="font-weight:bold;font-family:Britannic">Date Opened:</div>
+                                        <div class="text-right col-xs-3">
+                                            <label id="LabelDateOpened"></label>
+                                            <input type="hidden" id="DateOpened" name="DateOpened" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row" id="HideDateClosed">
+                                        <div class="col-xs-2" style="font-weight:bold;font-family:Britannic">Date Closed:</div>
+                                        <div class="text-right col-xs-3">
+                                            <label id="LabelDateClosed"></label>
+                                            <input type="hidden" id="DateClosed" name="DateClosed" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row" id="HideCloseCall">
+                                        <div class="col-xs-2" style="font-weight:bold; font-family:Britannic;">Close Call:</div>
+                                        <div class="text-right col-xs-1">
+                                            <input type="checkbox" id="CloseCall" name="CloseCall" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2" style="font-weight:bold; font-family:Britannic">Notes:</div>
+                                        <div class="text-right col-xs-7">
+                                            <textarea id="Notes" name="Notes" style="border:double 6px black; resize:none; padding-bottom:8px; padding:5px" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            <div class="col-xs-12" style="padding-top:10px">
+                                <input type="submit" id="ButtonAction" class="btn btn-success" />
+                                <input type="submit" id="ButtonDelete" class="btn btn-danger" value="Delete" />
+                            </div>
+                            <div class="col-xs-4 text-right" id="ModalStatus"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/call.js"></script>
+</body>
+</html>
+
